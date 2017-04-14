@@ -25,11 +25,13 @@ public class PressMePane extends GridPane{
 	}
 	
 	public void buttonSetup(Button b, int row, int col){
-		b.setOnMouseEntered(new EventHandler<InputEvent>(){
+		
+		b.setOnMouseClicked(new EventHandler<InputEvent>(){
+			int counter = 0;
 			@Override
 			public void handle(InputEvent arg0){
 				Main.changeScore++;
-				b.setText("" + Main.changeScore);
+				b.setText("" + ++counter);
 				Main.scoreValue.setText(String.valueOf(Main.changeScore));
 			}
 		});
