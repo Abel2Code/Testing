@@ -47,6 +47,7 @@ public class Main extends Application {
 		sc.getStylesheets().add("application/application.css");
 		header.getStyleClass().add("header");
 		grid.start();
+		window.getStylesheets().add("application/application.css");
 		primaryStage.setScene(sc);
 		primaryStage.show();
 		

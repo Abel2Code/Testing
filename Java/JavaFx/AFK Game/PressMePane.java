@@ -8,7 +8,7 @@ import javafx.scene.layout.GridPane;
 public class PressMePane extends GridPane{
 	Button[][] buttons;
 	int rows = 18;
-	int cols = 22;
+	int cols = 21;
 
 	public void start(){
 		buttons = new Button[rows][cols];
@@ -17,6 +17,7 @@ public class PressMePane extends GridPane{
 				Button b = new Button(" ");
 				b.setMinWidth(70);
 				buttonSetup(b, r, c);
+				b.getStyleClass().add("board");
 				buttons[r][c] = b;
 				add(b, r, c);
 			}
