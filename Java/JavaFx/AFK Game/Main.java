@@ -1,15 +1,12 @@
 package application;
 
+
 import javafx.application.Application;
-import javafx.event.Event;
-import javafx.event.EventHandler;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 
@@ -23,6 +20,7 @@ public class Main extends Application {
 		
 		BorderPane window = new BorderPane();
 		Label header = new Label("Welcome to this AFK game!");
+		header.setTextFill(Color.RED);
 		HBox head = new HBox();
 		head.getChildren().add(header);
 		Scene sc = new Scene(window, 1400, 600);
@@ -45,7 +43,10 @@ public class Main extends Application {
 		game.getChildren().add(grid);
 		window.setCenter(game);
 		sc.getStylesheets().add("application/application.css");
-		header.getStyleClass().add("header");
+		head.getStyleClass().add("center");
+		bottom.getStyleClass().add("center");
+		score.setTextFill(Color.RED);
+		scoreValue.setTextFill(Color.RED);
 		grid.start();
 		window.getStylesheets().add("application/application.css");
 		primaryStage.setScene(sc);

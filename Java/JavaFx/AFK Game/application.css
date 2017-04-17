@@ -1,3 +1,6 @@
+*{
+	-fx-background-color: black;
+}
 .board{
 	-fx-background-color: #f47442;
 	-fx-border-width: 1.0 1.0 1.0 1.0;
@@ -6,4 +9,12 @@
 	-fx-alignment: center;
 	-fx-font-size: 100%;
 	-fx-font-weight: bold;
+}
+
+.center{
+	-fx-alignment: center;
+}
+
+.buttons{
+
 }
